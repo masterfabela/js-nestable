@@ -10,25 +10,14 @@ $(document).ready(function () {
 	};
 
 	// activate Nestable for list 2
-	$('#nestable2')
+	$('#nestable3')
 		.nestable({
 			group: 1,
 		})
 		.on('change', updateOutput);
 
 	// output initial serialised data
-	updateOutput($('#nestable2').data('output', $('#nestable2-output')));
-
-	$('#nestable-menu').on('click', function (e) {
-		var target = $(e.target),
-			action = target.data('action');
-		if (action === 'expand-all') {
-			$('.dd').nestable('expandAll');
-		}
-		if (action === 'collapse-all') {
-			$('.dd').nestable('collapseAll');
-		}
-	});
+	updateOutput($('#nestable3').data('output', $('#nestable3-output')));
 
 	$('#nestable3').nestable();
 });
